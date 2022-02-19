@@ -266,9 +266,130 @@ main{
          text-align: center;
          grid: 2 / 3;
          img{
-            width: 300px;
+            width: 450px;
             object-fit: cover;
          }
       }
    }
+}
+
+.projects{
+   height: 100vh;
+   display: grid;
+   justify-content: center;
+   background-color: var(--background-dark-color);
+   text-align: center;
+   
+   &__headline{
+      color: var(--headline-dark-color);
+      font-size: 35px;
+      margin-bottom: 75px;
+   }
+
+   &__content{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "img text";
+      gap: 20px;
+      width: 900px;
+      height: 330px;
+      background-color: #242629;
+      padding: 15px 15px;
+
+      &__text{
+         grid-area: text;
+         padding: 20px;
+
+         .title{
+            text-align: end;
+            color: var(--headline-dark-color);
+            font-size: 30px;
+         }
+
+         .description{
+             background-color: #94a1b2;
+             width: 100%;
+             font-size: 20px;
+             padding: 25px;
+             box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+             border-radius: 5px;
+             background-color: var(--background-dark-color);
+             color: var(--paragraph-dark-color);
+             text-align: end;
+             margin-top: 20px;
+         }
+
+         .tech-list{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            color: var(--paragraph-dark-color);
+            margin-top: 15px;
+         }
+
+         .links{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            margin-top: 15px;
+            a .link-icon{
+               fill: #72757e;
+               width: 40px;
+               height: 40px;
+            }
+         }
+      }
+
+      &__img{
+         grid-area: img;
+         img{
+            width: 450px;
+            height: 300px;
+            object-fit: contain;
+         }
+      }
+   }
+}
+
+.footer{
+   height: 200px;
+   background-color: var(--background-dark-color);
+   color: var(--paragraph-dark-color);
+   text-align: center;
+
+
+   &__headline{
+      color: var(--headline-dark-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+   }
+
+   &__content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      
+      ul{
+         display: flex;
+         gap: 20px;
+         align-items: center;
+         .social{
+
+            &__title{
+               font-size: 20px;
+            }
+         }
+      }
+      .heart{
+         color: red;
+      }
+   }
+
 }
