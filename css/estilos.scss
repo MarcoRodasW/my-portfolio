@@ -48,11 +48,10 @@ ul{
 main{
    height: 100vh;
    background-color: var(--background-dark-color);
-   display: grid;
+   display: grid; 
+   grid-template-columns: repeat(2, 1fr); 
    grid-template-rows: 100px 1fr;
-   grid-template-columns: 1fr 1fr;
-   grid-template-areas: "navbar navbar"
-                        "hero hero";
+  
 }
 
 .container{
@@ -61,7 +60,7 @@ main{
 }
 
 .navbar{
-   grid-area: navbar;
+   grid-area: 1 / 1 / 2 / 3;
    background-color: var(--background-dark-color);
 
    .nav{
@@ -110,10 +109,10 @@ main{
 .hero{
    display: grid;
    place-content: center;
-   grid-area: hero;
+   grid-area: 2 / 1 / 3 / 3;
    height: 100%;
 
-   .hero-content{
+   &-content{
       display: grid;
       align-items: center;
       grid-template-columns: 1.7fr 1fr;
@@ -191,9 +190,12 @@ main{
 
       &__img{
          text-align: center;
-         img{
+         .img1{
             width: 300px;
             object-fit: cover;
+         }
+         .img2{
+            display: none;
          }
       }
    }
@@ -242,7 +244,6 @@ main{
          .cv{
             display: block;
             padding: 19px 30px;
-            margin-right: 30px;
             width: 200px;
             font-size: 20px;
             text-align: center;
@@ -265,9 +266,9 @@ main{
       &__img{
          text-align: center;
          grid: 2 / 3;
-         img{
+         .profile{
             width: 450px;
-            object-fit: cover;
+            object-fit: contain;
          }
       }
    }
@@ -289,15 +290,15 @@ main{
    &__content{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "img text";
-      gap: 20px;
+      grid-template-rows: 1fr;
+      column-gap: 20px;
       width: 900px;
       height: 330px;
       background-color: #242629;
       padding: 15px 15px;
 
       &__text{
-         grid-area: text;
+         grid-area: 1 / 2 / 2 / 3;
          padding: 20px;
 
          .title{
@@ -343,7 +344,8 @@ main{
       }
 
       &__img{
-         grid-area: img;
+         grid-area: 1 / 1 / 2 / 2;
+         text-align: center;
          img{
             width: 450px;
             height: 300px;
@@ -392,4 +394,159 @@ main{
       }
    }
 
+}
+
+//media query for header and hero section ✔
+
+@media (max-width: 1200px) {
+   .container{
+      max-width: 850px;
+      margin: 0 auto;
+   }
+
+   .about{
+      .about-content{
+
+         &__text{
+            font-size: 23px;
+            h2{
+               font-size: 45px;
+            }
+         }
+         
+         &__img{
+            .profile{
+               width: 350px;
+               object-fit: contain;
+            }
+         }
+      }
+   }
+
+   .projects{
+      &__content{
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width:900px) {
+   .container{
+      max-width: 650px;
+      margin: 0 auto;
+   }
+
+
+   .hero{
+      height: 100%;
+      &-content{
+         grid-template-columns: 1fr; 
+         grid-template-rows: repeat(2, 1fr);
+         gap: 0px;
+         &__text{
+            grid-area: 1 / 1 / 2 / 2;
+            margin-top: 15px;
+            text-align: center;
+            .welcome{
+               font-size: 20px;
+            }
+            .name{
+               font-size: 50px;
+            }
+            .description{
+               font-size: 30px;
+            }
+            .improve{
+               font-size: 20px;
+            }
+            .contact{
+               justify-content: center;
+            }
+         }
+         &__img{
+            grid-area: 2 / 1 / 3 / 2;
+            text-align: center;
+            .img1{
+               display: none;
+            }
+            .img2{
+               display: inline-block;
+               width: 500px;
+               object-fit: contain;
+            }
+         }
+      }
+   }
+
+   .about{
+      height: 100%;
+      .about-content{
+         grid-template-columns: 1fr; 
+         grid-template-rows: repeat(2, 1fr);
+         gap: 20px;
+
+         &__text{
+            grid-area: 1 / 1 / 2 / 2;
+            text-align: center;
+            font-size: 25px;
+
+            h2{
+               font-size: 40px;
+            }
+            .skills{
+
+               &__list{
+                  text-align: center;
+                  list-style: none;
+               }
+            }
+            .cv{
+               display: inline-block;
+            }
+         }
+         &__img{
+            grid-area: 2 / 1 / 3 / 2;
+            .profile{
+               width: 370px;
+               object-fit: contain;
+            }
+         }
+      }
+   }
+
+   .projects{
+      &__content{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(2, 1fr);
+         row-gap: 10px;
+         height: 600px;
+         width: 500px;
+
+         &__text{
+            grid-area: 2 / 1 / 3 / 2;
+            .title{
+               text-align: center;
+               font-size: 27px;
+            }
+            .description{
+               text-align: center;
+               font-size: 18px;
+               margin-top: 15px;
+            }
+            .tech-list{
+               justify-content: center;
+            }
+            .links{
+               justify-content: center;
+            }
+         }
+         &__img{
+            grid-area: 1 / 1 / 2 / 2;
+            img{
+               text-align: center;
+            }
+         }
+      }
+   }
 }
