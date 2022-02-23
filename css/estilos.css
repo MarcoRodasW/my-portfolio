@@ -425,6 +425,7 @@ main {
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
   text-align: center;
+  padding-left: 20px;
 }
 
 .projects__content__img img {
@@ -654,9 +655,185 @@ main {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 2 / 2;
+    padding: 0;
   }
   .projects__content__img img {
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    height: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 200px 1fr;
+        grid-template-rows: 200px 1fr;
+    gap: 20px;
+  }
+  .navbar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .navbar .nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
+  }
+  .navbar .nav__logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .navbar .nav__links {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .navbar .nav__links__link a {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .navbar .cv {
+    padding: 5px 15px;
+  }
+  /*Fela Pure*/
+  .hero {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .hero-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+  .hero-content__text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .hero-content__text .welcome {
+    font-size: 20px;
+  }
+  .hero-content__text .name {
+    font-size: 45px;
+  }
+  .hero-content__text .description {
+    font-size: 25px;
+    width: 75%;
+    margin: auto;
+  }
+  .hero-content__text .improve {
+    width: 80%;
+    margin: 5px auto;
+  }
+  .hero-content__text .contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+  .hero-content__text .contact .cta {
+    margin: 0;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .hero-content__text .contact__links {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .hero-content__img {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+  }
+  .hero-content__img .img1 {
+    display: none;
+  }
+  .hero-content__img .img2 {
+    display: inline-block;
+    width: 350px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .about .about-content__text {
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about .about-content__text .cv {
+    padding: 16px 30px;
+  }
+  .about .about-content__img .profile {
+    width: 300px;
+  }
+  .projects {
+    height: 100%;
+    width: 100%;
+  }
+  .projects__headline {
+    width: 80%;
+    font-size: 27px;
+    margin: 70px auto;
+  }
+  .projects__content {
+    width: 90%;
+    height: 72%;
+    margin: auto;
+    padding: 0 15px 15px 15px;
+    gap: 0;
+  }
+  .projects__content__text {
+    padding: 0 20px 20px 20px;
+  }
+  .projects__content__img img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projects__content__img img {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
