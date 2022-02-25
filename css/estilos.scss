@@ -606,8 +606,8 @@ main{
             }
             .description{
                font-size: 25px;
-               width: 75%;
-               margin: auto;
+               width: 85%;
+               margin: 5px auto;
             }
             .improve{
                width: 80%;
@@ -697,6 +697,74 @@ main{
          &__img{
             img{
                width: 300px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 380px) {
+   .navbar{
+      .nav{
+         &__links{
+            &__link a{
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+
+   .hero{
+      &-content{
+         &__img{
+            .img2{
+               width: 300px;
+            }
+         }
+      }
+   }
+   .projects{
+      &__content{
+         width: 90%;
+         &__img{
+            width: 100%;
+            img{
+               width: 100%;
+            }
+         }
+      }
+   }
+   .footer{
+      &__content{
+         ul{
+            gap: 5px;
+         }
+      }
+   }
+}
+
+@media (max-width:320px) {
+   .navbar{
+      .nav{
+         &__links{
+            &__link a{
+               font-size: 0.9rem;
+            }
+         }
+      }
+   }
+   .hero{
+      &-content{
+         &__text{
+            .name{
+               font-size: 40px;
+            }
+            .description{
+               margin-top: 10px ;
+               width: 90%;
+            }
+            .improve{
+               margin-top: 10px;
             }
          }
       }

@@ -744,8 +744,8 @@ main {
   }
   .hero-content__text .description {
     font-size: 25px;
-    width: 75%;
-    margin: auto;
+    width: 85%;
+    margin: 5px auto;
   }
   .hero-content__text .improve {
     width: 80%;
@@ -834,6 +834,43 @@ main {
 @media (max-width: 400px) {
   .projects__content__img img {
     width: 300px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar .nav__links__link a {
+    font-size: 1rem;
+  }
+  .hero-content__img .img2 {
+    width: 300px;
+  }
+  .projects__content {
+    width: 90%;
+  }
+  .projects__content__img {
+    width: 100%;
+  }
+  .projects__content__img img {
+    width: 100%;
+  }
+  .footer__content ul {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar .nav__links__link a {
+    font-size: 0.9rem;
+  }
+  .hero-content__text .name {
+    font-size: 40px;
+  }
+  .hero-content__text .description {
+    margin-top: 10px;
+    width: 90%;
+  }
+  .hero-content__text .improve {
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
