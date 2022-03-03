@@ -323,7 +323,6 @@ main {
 }
 
 .projects {
-  height: 100vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -352,6 +351,7 @@ main {
   height: 330px;
   background-color: #242629;
   padding: 15px 15px;
+  margin-bottom: 60px;
 }
 
 .projects__content__text {
@@ -714,7 +714,6 @@ main {
   .navbar .cv {
     padding: 5px 15px;
   }
-  /*Fela Pure*/
   .hero {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -818,8 +817,7 @@ main {
   }
   .projects__content {
     width: 90%;
-    height: 72%;
-    margin: auto;
+    margin: 40px auto;
     padding: 0 15px 15px 15px;
     gap: 0;
   }
