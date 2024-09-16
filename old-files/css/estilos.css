@@ -68,7 +68,7 @@ main {
   width: 100px;
   height: 100px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   cursor: pointer;
 }
 .navbar .nav__links {
@@ -95,7 +95,8 @@ main {
   border-color: transparent;
   transition: all 0.2s ease-in-out;
 }
-.navbar .cv:hover, .navbar .cv:focus {
+.navbar .cv:hover,
+.navbar .cv:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--button-dark-color);
 }
 
@@ -152,7 +153,8 @@ main {
   border-color: transparent;
   transition: all 0.2s ease-in-out;
 }
-.hero-content__text .contact .cta:hover, .hero-content__text .contact .cta:focus {
+.hero-content__text .contact .cta:hover,
+.hero-content__text .contact .cta:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--button-dark-color);
   transform: translateY(-0.25em);
 }
@@ -174,7 +176,7 @@ main {
 .hero-content__img .img1 {
   width: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero-content__img .img2 {
   display: none;
@@ -237,7 +239,8 @@ main {
   border-color: transparent;
   transition: all 0.2s ease-in-out;
 }
-.about .about-content__text .cv:hover, .about .about-content__text .cv:focus {
+.about .about-content__text .cv:hover,
+.about .about-content__text .cv:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--button-dark-color);
   transform: translateY(-0.25em);
 }
@@ -248,7 +251,7 @@ main {
 .about .about-content__img .profile {
   width: 450px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .projects {
@@ -267,7 +270,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   width: 900px;
   height: 330px;
   background-color: #242629;
@@ -331,7 +334,7 @@ main {
   width: 450px;
   height: 300px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .footer {
@@ -389,7 +392,7 @@ main {
   .about .about-content__img .profile {
     width: 350px;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 
   .projects__content {
@@ -441,7 +444,7 @@ main {
     display: inline-block;
     width: 500px;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 
   .about {
@@ -473,7 +476,7 @@ main {
   .about .about-content__img .profile {
     width: 370px;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 
   .projects__content {
@@ -597,7 +600,7 @@ main {
     display: inline-block;
     width: 350px;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 
   .about .about-content__text {
@@ -677,4 +680,4 @@ main {
   .hero-content__text .improve {
     margin-top: 10px;
   }
-}/*# sourceMappingURL=estilos.css.map */
+} /*# sourceMappingURL=estilos.css.map */
